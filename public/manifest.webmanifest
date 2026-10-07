@@ -1,1 +1,20 @@
-{"name": "Slovak Lingua — словацкий с нуля", "short_name": "Slovak Lingua", "lang": "ru", "start_url": "./index.html", "display": "standalone", "background_color": "#f9f8f7", "theme_color": "#176ec3", "icons": [{"src": "icon.png", "sizes": "192x192", "type": "image/png"}, {"src": "icon-512.png", "sizes": "512x512", "type": "image/png"}]}
+{
+  "name": "Lingua Mini Slovak",
+  "short_name": "Lingua SK",
+  "description": "Минималистичное приложение для изучения английского языка: карточки, квизы, прогресс.",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#0b1220",
+  "theme_color": "#3b6bff",
+  "orientation": "portrait",
+  "lang": "ru",
+  "icons": [
+    {
+      "src": "./icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "scope": "./"
+}

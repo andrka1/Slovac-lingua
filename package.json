@@ -1,1 +1,34 @@
-{"name":"slovak-lingua","version":"2.0.0","private":true,"description":"Slovak from zero for Russian-speaking university applicants; based on Lingua Mini","scripts":{"build":"node scripts/build.cjs","dev":"node scripts/serve.cjs","android:sync":"npm run build && cap sync android","android:add":"cap add android"},"dependencies":{"react":"^18.3.1","react-dom":"^18.3.1","@capacitor/core":"^6.2.1","@capacitor/android":"^6.2.1"},"devDependencies":{"esbuild":"^0.25.0","@capacitor/cli":"^6.2.1","typescript":"^5.5.4"}}
+{
+  "name": "lingua-mini-slovak",
+  "private": true,
+  "version": "2.1.0",
+  "type": "module",
+  "description": "Lingua Mini — словацкий, с исходным оформлением и упражнениями",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview --host",
+    "typecheck": "tsc --noEmit",
+    "android:sync": "npm run build && npx cap sync android",
+    "android:open": "npx cap open android",
+    "postbuild": "node scripts/offline.cjs"
+  },
+  "dependencies": {
+    "@capacitor/android": "^6.2.1",
+    "@capacitor/core": "^6.2.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.26.2"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^6.2.1",
+    "@types/react": "^18.3.5",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.3.1",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.45",
+    "tailwindcss": "^3.4.10",
+    "typescript": "^5.5.4",
+    "vite": "^5.4.6"
+  }
+}

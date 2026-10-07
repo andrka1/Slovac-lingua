@@ -1,0 +1,382 @@
+import { useState, useEffect, useMemo, useRef } from "react";
+import { useNavigate } from "react-router-dom";
+import { words, categories } from "../data/words.ts";
+import { Word } from "../data/types.ts";
+import {
+  getExcludedIds,
+  getWeakWordIds,
+  recordWordError,
+  recordWordCorrect,
+  markWordLearned,
+  saveQuizResult,
+} from "../data/storage.ts";
+
+function shuffle<T>(arr: T[]): T[] {
+  const a = [...arr];
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+const normalize = (s: string) => s.toLowerCase().trim().normalize("NFC").replace(/[.!?]+$/, "").replace(/\s+/g, " ").trim();
+
+type Status = "idle" | "correct" | "wrong";
+type SpellingState = "setup" | "playing" | "finished";
+
+export default function SpellingPage() {
+  const navigate = useNavigate();
+
+  const [state, setState] = useState<SpellingState>("setup");
+  const [selectedCategory, setSelectedCategory] = useState<string>("all");
+  const [wordCount, setWordCount] = useState(10);
+  const [deck, setDeck] = useState<Word[]>([]);
+
+  const [index, setIndex] = useState(0);
+  const [value, setValue] = useState("");
+  const [status, setStatus] = useState<Status>("idle");
+  const [revealed, setRevealed] = useState(false);
+  const [correctCount, setCorrectCount] = useState(0);
+  const inputRef = useRef<HTMLInputElement>(null);
+
+  const word = deck[index];
+
+  // Сколько слов доступно в выбранной категории (для экрана настройки).
+  const availableCount = useMemo(() => {
+    const excluded = new Set(getExcludedIds());
+    return words.filter(
+      (w) =>
+        (selectedCategory === "all" || w.category === selectedCategory) &&
+        !excluded.has(w.id)
+    ).length;
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [selectedCategory, state]);
+
+  // Фокус на поле ввода при появлении нового слова.
+  useEffect(() => {
+    if (state === "playing" && status === "idle") {
+      const t = setTimeout(() => inputRef.current?.focus(), 50);
+      return () => clearTimeout(t);
+    }
+  }, [index, status, state]);
+
+  // Сохраняем результат сессии один раз, когда раунд завершён.
+  useEffect(() => {
+    if (state === "finished" && deck.length > 0) {
+      saveQuizResult(
+        correctCount,
+        deck.length,
+        selectedCategory === "all" ? "spelling" : selectedCategory
+      );
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [state]);
+
+  const start = () => {
+    const excluded = new Set(getExcludedIds());
+    const inCategory = (w: Word) =>
+      selectedCategory === "all" ? true : w.category === selectedCategory;
+
+    const pool = words.filter((w) => inCategory(w) && !excluded.has(w.id));
+    const weak = new Set(getWeakWordIds());
+    const weakWords = pool.filter((w) => weak.has(w.id));
+    const rest = pool.filter((w) => !weak.has(w.id));
+    const ordered = [...shuffle(weakWords), ...shuffle(rest)];
+    const selected = ordered.slice(0, Math.min(wordCount, ordered.length));
+
+    setDeck(selected);
+    setIndex(0);
+    setValue("");
+    setStatus("idle");
+    setRevealed(false);
+    setCorrectCount(0);
+    setState("playing");
+  };
+
+  const check = () => {
+    if (!word || status !== "idle") return;
+    const ok = normalize(value) === normalize(word.en);
+    if (ok) {
+      setStatus("correct");
+      setCorrectCount((c) => c + 1);
+      recordWordCorrect(word.id);
+      markWordLearned(word.id);
+    } else {
+      setStatus("wrong");
+      recordWordError(word.id);
+    }
+  };
+
+  const next = () => {
+    if (index + 1 >= deck.length) {
+      setState("finished");
+      return;
+    }
+    setIndex((i) => i + 1);
+    setValue("");
+    setStatus("idle");
+    setRevealed(false);
+  };
+
+  const giveUp = () => {
+    if (!word || status !== "idle") return;
+    setStatus("wrong");
+    recordWordError(word.id);
+  };
+
+  const onKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === "Enter") {
+      e.preventDefault();
+      if (status === "idle") check();
+    }
+  };
+
+  const mask = (w: string) =>
+    w
+      .split("")
+      .map((ch, i) => (i === 0 || ch === " " ? ch : "·"))
+      .join("");
+
+  // ---- Экран настройки ----
+  if (state === "setup") {
+    return (
+      <div className="px-5 pt-6 pb-4 animate-fade-in">
+        {/* Header */}
+        <div className="flex items-center gap-3 mb-4">
+          <button
+            onClick={() => navigate("/")}
+            className="w-9 h-9 rounded-xl bg-slate-800 border border-slate-700/50 flex items-center justify-center text-slate-300 hover:text-white transition-colors"
+          >
+            ←
+          </button>
+          <div className="flex-1">
+            <h1 className="text-2xl font-display font-bold text-white">Письмо</h1>
+            <p className="text-slate-400 text-sm">Впиши слово или фразу</p>
+          </div>
+        </div>
+
+        {/* Category */}
+        <div className="mb-5">
+          <label className="text-sm font-medium text-slate-300 mb-3 block">Категория</label>
+          <div className="flex flex-wrap gap-2 max-h-48 overflow-y-auto pr-1">
+            <button
+              onClick={() => setSelectedCategory("all")}
+              className={`px-3 py-2 rounded-xl text-xs font-medium transition-all ${
+                selectedCategory === "all"
+                  ? "bg-brand-500 text-white"
+                  : "bg-slate-800 text-slate-400 border border-slate-700/50"
+              }`}
+            >
+              🌐 Все
+            </button>
+            {categories.map((cat) => (
+              <button
+                key={cat.id}
+                onClick={() => setSelectedCategory(cat.id)}
+                className={`px-3 py-2 rounded-xl text-xs font-medium transition-all ${
+                  selectedCategory === cat.id
+                    ? "bg-brand-500 text-white"
+                    : "bg-slate-800 text-slate-400 border border-slate-700/50"
+                }`}
+              >
+                {cat.emoji} {cat.name}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        {/* Word count */}
+        <div className="mb-6">
+          <label className="text-sm font-medium text-slate-300 mb-3 block">Количество слов</label>
+          <div className="flex gap-2">
+            {[5, 10, 15, 20].map((count) => (
+              <button
+                key={count}
+                onClick={() => setWordCount(count)}
+                className={`flex-1 py-3 rounded-xl text-sm font-medium transition-all ${
+                  wordCount === count
+                    ? "bg-brand-500 text-white"
+                    : "bg-slate-800 text-slate-400 border border-slate-700/50"
+                }`}
+              >
+                {count}
+              </button>
+            ))}
+          </div>
+          <p className="text-xs text-slate-500 mt-3">
+            Доступно слов: {availableCount}. В раунде будет{" "}
+            {Math.min(wordCount, availableCount)}.
+          </p>
+        </div>
+
+        <button
+          onClick={start}
+          disabled={availableCount === 0}
+          className="w-full py-4 rounded-2xl bg-gradient-to-r from-brand-500 to-brand-400 text-white font-semibold text-base active:scale-[0.98] transition-all disabled:opacity-40"
+        >
+          {availableCount === 0 ? "Нет слов для тренировки" : "Начать"}
+        </button>
+      </div>
+    );
+  }
+
+  // ---- Экран результата ----
+  if (state === "finished") {
+    const pct = deck.length ? Math.round((correctCount / deck.length) * 100) : 0;
+    const emoji = pct >= 80 ? "🏆" : pct >= 50 ? "👍" : "💪";
+    return (
+      <div className="px-5 pt-12 pb-4 animate-fade-in flex flex-col items-center text-center">
+        <div className="text-6xl mb-4">{emoji}</div>
+        <h1 className="text-2xl font-display font-bold text-white mb-2">Раунд завершён!</h1>
+        <p className="text-slate-400 mb-8">
+          Правильно{" "}
+          <span className="text-brand-400 font-bold">{correctCount}</span> из {deck.length} ({pct}%)
+        </p>
+        <div className="flex flex-col gap-3 w-full max-w-xs">
+          <button
+            onClick={start}
+            className="py-3.5 rounded-2xl bg-brand-500 text-white font-medium active:scale-95 transition-all"
+          >
+            🔁 Ещё раунд
+          </button>
+          <button
+            onClick={() => setState("setup")}
+            className="py-3.5 rounded-2xl bg-slate-800 border border-slate-700/50 text-slate-300 font-medium active:scale-95 transition-all"
+          >
+            ⚙️ Изменить настройки
+          </button>
+          <button
+            onClick={() => navigate("/")}
+            className="py-3.5 rounded-2xl bg-slate-800 border border-slate-700/50 text-slate-300 font-medium active:scale-95 transition-all"
+          >
+            На главную
+          </button>
+        </div>
+      </div>
+    );
+  }
+
+  // ---- Активный экран ----
+  if (!word) {
+    return (
+      <div className="px-5 pt-16 text-center animate-fade-in">
+        <div className="text-5xl mb-4">⌨️</div>
+        <p className="text-slate-400">Нет слов для тренировки.</p>
+        <button
+          onClick={() => setState("setup")}
+          className="mt-6 px-6 py-3 rounded-2xl bg-brand-500 text-white font-medium active:scale-95 transition-all"
+        >
+          К настройкам
+        </button>
+      </div>
+    );
+  }
+
+  const progressPct = Math.round((index / deck.length) * 100);
+  const barStyle = { width: progressPct + "%" };
+  return (
+    <div className="px-5 pt-6 pb-4 animate-fade-in">
+      {/* Header */}
+      <div className="flex items-center gap-3 mb-4">
+        <button
+          onClick={() => setState("setup")}
+          className="w-9 h-9 rounded-xl bg-slate-800 border border-slate-700/50 flex items-center justify-center text-slate-300 hover:text-white transition-colors"
+        >
+          ←
+        </button>
+        <div className="flex-1">
+          <h1 className="text-lg font-display font-bold text-white">Письмо</h1>
+          <p className="text-xs text-slate-400">Впиши слово или фразу</p>
+        </div>
+        <span className="text-sm text-slate-400">
+          <span className="text-brand-400 font-semibold">{index + 1}</span>/{deck.length}
+        </span>
+      </div>
+
+      {/* Progress bar */}
+      <div className="h-1.5 w-full bg-slate-800 rounded-full mb-6 overflow-hidden">
+        <div className="h-full bg-brand-500 transition-all duration-300" style={barStyle} />
+      </div>
+
+      {/* Prompt */}
+      <div className="rounded-3xl bg-gradient-to-br from-slate-800 to-slate-900 border border-slate-700/50 p-6 mb-5 text-center">
+        <span className="text-xs uppercase tracking-widest text-slate-500">Перевод</span>
+        <h2 className="text-3xl font-display font-bold text-white mt-2 mb-1">{word.ru}</h2>
+        {revealed && status === "idle" && (
+          <p className="mt-4 text-lg font-mono tracking-[0.3em] text-amber-300">{mask(word.en)}</p>
+        )}
+      </div>
+
+      {/* Input */}
+      <input
+        ref={inputRef}
+        value={value}
+        onChange={(e) => setValue(e.target.value)}
+        onKeyDown={onKeyDown}
+        disabled={status !== "idle"}
+        placeholder="Словацкое слово или фраза…"
+        autoCapitalize="off"
+        autoCorrect="off"
+        autoComplete="off"
+        spellCheck={false}
+        className={`w-full px-4 py-3.5 rounded-2xl bg-slate-800 border text-center text-lg text-white outline-none transition-all ${
+          status === "correct"
+            ? "border-emerald-500"
+            : status === "wrong"
+            ? "border-red-500"
+            : "border-slate-700/50 focus:border-brand-500"
+        }`}
+      />
+
+      {status === "idle" && <div className="flex flex-wrap gap-1.5 mt-3">{"áäčďéíĺľňóôŕšťúýž".split("").map(c=><button key={c} type="button" onClick={()=>{const el=inputRef.current;const a=el?.selectionStart ?? value.length;const b=el?.selectionEnd ?? a;setValue(value.slice(0,a)+c+value.slice(b));setTimeout(()=>{el?.focus();el?.setSelectionRange(a+1,a+1)},0)}} className="w-11 h-11 rounded-lg bg-slate-800 border border-slate-700 text-brand-300">{c}</button>)}</div>}
+      {/* Feedback */}
+      {status === "wrong" && (
+        <p className="mt-3 text-center text-sm">
+          <span className="text-slate-400">Правильно: </span>
+          <span className="text-emerald-400 font-semibold">{word.en}</span>
+        </p>
+      )}
+      {status === "correct" && (
+        <p className="mt-3 text-center text-sm text-emerald-400 font-semibold">Верно! ✓</p>
+      )}
+
+      {/* Actions */}
+      <div className="flex items-center gap-3 mt-5">
+        {status === "idle" ? (
+          <>
+            <button
+              onClick={() => setRevealed(true)}
+              className="flex-1 py-3.5 rounded-2xl bg-slate-800 border border-slate-700/50 text-slate-300 font-medium active:scale-95 transition-all"
+            >
+              💡 Подсказка
+            </button>
+            <button
+              onClick={check}
+              disabled={!value.trim()}
+              className="flex-[2] py-3.5 rounded-2xl bg-brand-500 text-white font-medium active:scale-95 transition-all disabled:opacity-40"
+            >
+              Проверить
+            </button>
+          </>
+        ) : (
+          <button
+            onClick={next}
+            className="flex-1 py-3.5 rounded-2xl bg-brand-500 text-white font-medium active:scale-95 transition-all"
+          >
+            {index + 1 >= deck.length ? "Завершить" : "Дальше →"}
+          </button>
+        )}
+      </div>
+
+      {status === "idle" && (
+        <button
+          onClick={giveUp}
+          className="w-full mt-3 py-2 text-xs text-slate-500 hover:text-slate-300 transition-colors"
+        >
+          Не знаю — показать ответ
+        </button>
+      )}
+    </div>
+  );
+}

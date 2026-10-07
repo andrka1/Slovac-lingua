@@ -1,0 +1,143 @@
+import { useMemo, useState } from "react";
+import Transcription from "./Transcription.tsx";
+import { GrammarExercise } from "../data/grammar.ts";
+
+interface Props {
+  exercise: GrammarExercise;
+  questionNum: number;
+  totalQuestions: number;
+  onAnswer: (correct: boolean) => void;
+}
+
+export default function GrammarExerciseCard({
+  exercise,
+  questionNum,
+  totalQuestions,
+  onAnswer,
+}: Props) {
+  const [selected, setSelected] = useState<number | null>(null);
+  const answered = selected !== null;
+  const isIdentify = exercise.kind === "identify" || exercise.kind === "choose";
+  // Разбиваем по пропускам. Если в предложении несколько "___",
+  // чип с ответом ставим на место первого, а весь оставшийся текст
+  // сохраняем (раньше хвост после второго пропуска терялся).
+  const segments = isIdentify ? [exercise.sentence] : exercise.sentence.split("___");
+  const before = segments[0];
+  const after = segments.slice(1).join("");
+
+  // Перемешиваем варианты ответа, чтобы правильный не стоял всегда на одном месте.
+  // Пересчитывается при смене задания.
+  const { opts, correctIndex } = useMemo(() => {
+    const indices = exercise.options.map((_, i) => i);
+    for (let i = indices.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [indices[i], indices[j]] = [indices[j], indices[i]];
+    }
+    return {
+      opts: indices.map((idx) => exercise.options[idx]),
+      correctIndex: indices.indexOf(exercise.answer),
+    };
+  }, [exercise]);
+
+  const handleSelect = (i: number) => {
+    if (answered) return;
+    setSelected(i);
+  };
+
+  const handleNext = () => {
+    const correct = selected === correctIndex;
+    setSelected(null);
+    onAnswer(correct);
+  };
+
+  const optionStyle = (i: number) => {
+    if (!answered)
+      return "bg-slate-800/80 border-slate-700/50 text-white hover:bg-slate-700 active:scale-[0.98]";
+    if (i === correctIndex)
+      return "bg-emerald-500/20 border-emerald-500 text-emerald-300";
+    if (i === selected)
+      return "bg-red-500/20 border-red-500 text-red-300";
+    return "bg-slate-800/40 border-slate-700/30 text-slate-500";
+  };
+
+  return (
+    <div className="flex flex-col h-full">
+      {/* Progress */}
+      <div className="mb-4">
+        <div className="flex items-center justify-between text-xs text-slate-400 mb-2">
+          <span>
+            Вопрос {questionNum}/{totalQuestions}
+          </span>
+          <span>
+            {Math.round((questionNum / totalQuestions) * 100)}%
+          </span>
+        </div>
+        <div className="h-1.5 bg-slate-800 rounded-full overflow-hidden">
+          <div
+            className="h-full bg-brand-500 rounded-full transition-all"
+            style={{ width: `${(questionNum / totalQuestions) * 100}%` }}
+          />
+        </div>
+      </div>
+
+      {/* Sentence */}
+      <div className="mb-6">
+        <p className="text-sm text-slate-400 mb-3">
+          {exercise.kind === "identify" ? "Определи, какое это время" : exercise.kind === "choose" ? "Выбери правильный ответ" : "Выбери правильную форму"}
+        </p>
+        {isIdentify ? (
+          <div className="text-xl font-medium text-white leading-relaxed">
+            {exercise.sentence}
+          </div>
+        ) : (
+          <div className="text-xl font-medium text-white leading-relaxed">
+            {before}
+            <span className="inline-block mx-1 px-3 py-1 rounded-lg bg-brand-500/20 text-brand-300 font-semibold">
+              {answered ? opts[correctIndex] : "…"}
+            </span>
+            {after}
+          </div>
+        )}
+        {(answered || isIdentify) && <Transcription text={isIdentify ? exercise.sentence : exercise.sentence.replace("___", exercise.options[exercise.answer])} />}
+        {exercise.hint && (
+          <p className="text-sm text-amber-300/80 mt-2">💡 {exercise.hint}</p>
+        )}
+      </div>
+
+      {/* Options */}
+      <div className="space-y-2 mb-4">
+        {opts.map((option, i) => (
+          <button
+            key={i}
+            onClick={() => handleSelect(i)}
+            disabled={answered}
+            className={`w-full py-4 px-6 rounded-2xl border text-left font-medium transition-all duration-200 ${optionStyle(i)}`}
+          >
+            <span className="inline-block w-8 text-slate-400 font-mono">
+              {String.fromCharCode(65 + i)}
+            </span>
+            {option}
+          </button>
+        ))}
+      </div>
+
+      {/* Explanation + next */}
+      {answered && (
+        <div className="mt-auto">
+          <div className="p-4 rounded-2xl bg-slate-800/60 border border-slate-700/40 mb-4">
+            <p className="text-sm text-slate-300">
+              {selected === correctIndex ? "✅ Верно! " : "❌ Не совсем. "}
+              {exercise.explanation}
+            </p>
+          </div>
+          <button
+            onClick={handleNext}
+            className="w-full py-4 rounded-2xl bg-gradient-to-r from-brand-500 to-brand-600 text-white font-semibold transition-all active:scale-[0.98] shadow-soft"
+          >
+            {questionNum >= totalQuestions ? "Завершить" : "Дальше →"}
+          </button>
+        </div>
+      )}
+    </div>
+  );
+}
