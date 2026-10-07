@@ -1,0 +1,140 @@
+@Знакомство
+Dobrý deň.|Добрый день.
+Dobré ráno.|Доброе утро.
+Dobrý večer.|Добрый вечер.
+Dobrú noc.|Спокойной ночи.
+Ako sa voláte?|Как вас зовут?
+Volám sa Anna.|Меня зовут Анна.
+Teší ma.|Приятно познакомиться.
+Som z Ruska.|Я из России.
+Učím sa po slovensky.|Я учу словацкий.
+Nerozumiem.|Я не понимаю.
+Môžete to zopakovať?|Можете это повторить?
+Hovorte pomalšie, prosím.|Говорите медленнее, пожалуйста.
+Čo znamená toto slovo?|Что означает это слово?
+Ako sa to píše?|Как это пишется?
+Ďakujem za pomoc.|Спасибо за помощь.
+@Магазин
+Koľko to stojí?|Сколько это стоит?
+Kde nájdem chlieb?|Где я найду хлеб?
+Máte menšie balenie?|У вас есть упаковка поменьше?
+Prosím si jednu tašku.|Дайте, пожалуйста, один пакет.
+Môžem platiť kartou?|Можно оплатить картой?
+Budem platiť v hotovosti.|Я буду платить наличными.
+Prosím si bloček.|Дайте, пожалуйста, чек.
+To je príliš drahé.|Это слишком дорого.
+Máte inú veľkosť?|У вас есть другой размер?
+Môžem si to vyskúšať?|Можно это примерить?
+Kde je pokladňa?|Где касса?
+Chcel by som to vrátiť.|Я хотел бы это вернуть.
+@Ресторан
+Máte voľný stôl pre dvoch?|Есть свободный стол на двоих?
+Jedálny lístok, prosím.|Меню, пожалуйста.
+Prosím si kávu bez cukru.|Мне кофе без сахара, пожалуйста.
+Prosím si pohár vody.|Мне стакан воды, пожалуйста.
+Čo odporúčate?|Что вы рекомендуете?
+Nejem mäso.|Я не ем мясо.
+Mám alergiu na orechy.|У меня аллергия на орехи.
+Je v tom mlieko?|В этом есть молоко?
+Účet, prosím.|Счёт, пожалуйста.
+Môžeme platiť osobitne?|Можем заплатить отдельно?
+Bolo to veľmi dobré.|Это было очень вкусно.
+Dám si polievku.|Я возьму суп.
+@Транспорт
+Kde je autobusová zastávka?|Где автобусная остановка?
+Kedy odchádza vlak?|Когда отправляется поезд?
+Jeden lístok do Bratislavy, prosím.|Один билет до Братиславы, пожалуйста.
+Musím prestupovať?|Мне нужно пересаживаться?
+Z ktorého nástupišťa odchádza vlak?|С какой платформы отправляется поезд?
+Ide tento autobus do centra?|Этот автобус едет в центр?
+Kde mám vystúpiť?|Где мне выйти?
+Je toto miesto voľné?|Это место свободно?
+Vlak mešká.|Поезд опаздывает.
+Potrebujem spiatočný lístok.|Мне нужен билет туда и обратно.
+Kde si môžem kúpiť lístok?|Где можно купить билет?
+Prosím, zastavte tu.|Пожалуйста, остановитесь здесь.
+@Врач и аптека
+Potrebujem lekára.|Мне нужен врач.
+Necítim sa dobre.|Я плохо себя чувствую.
+Bolí ma hlava.|У меня болит голова.
+Bolí ma brucho.|У меня болит живот.
+Mám horúčku.|У меня высокая температура.
+Mám alergiu na penicilín.|У меня аллергия на пенициллин.
+Užívam tieto lieky.|Я принимаю эти лекарства.
+Potrebujem recept.|Мне нужен рецепт.
+Ako často mám užívať tento liek?|Как часто мне принимать это лекарство?
+Kde je najbližšia lekáreň?|Где ближайшая аптека?
+Mám zdravotné poistenie.|У меня есть медицинская страховка.
+Chcel by som sa objednať na vyšetrenie.|Я хотел бы записаться на обследование.
+@Экстренная помощь
+Pomoc!|Помогите!
+Zavolajte sanitku!|Вызовите скорую помощь!
+Zavolajte políciu!|Вызовите полицию!
+Potrebujem pomoc.|Мне нужна помощь.
+Nemôžem dýchať.|Я не могу дышать.
+Stratil som pas.|Я потерял паспорт (мужчина).
+Stratila som pas.|Я потеряла паспорт (женщина).
+Niekto mi ukradol peňaženku.|Кто-то украл мой кошелёк.
+Som na tejto adrese.|Я по этому адресу.
+Kde je najbližšia nemocnica?|Где ближайшая больница?
+@Вуз и поступление
+Kde je študijné oddelenie?|Где учебный отдел?
+Chcem študovať na tejto univerzite.|Я хочу учиться в этом университете.
+Aké dokumenty potrebujem?|Какие документы мне нужны?
+Kedy je zápis?|Когда зачисление / регистрация?
+Kedy sú prijímacie skúšky?|Когда вступительные экзамены?
+Ako podám prihlášku?|Как подать заявление?
+Potrebujem potvrdenie o štúdiu.|Мне нужна справка об обучении.
+Ako požiadam o štipendium?|Как подать заявку на стипендию?
+Aké sú jazykové požiadavky?|Какие языковые требования?
+Kde nájdem študijný plán?|Где найти учебный план?
+Koľko stojí školné?|Сколько стоит обучение?
+Je tento predmet povinný?|Этот предмет обязательный?
+@Занятия и экзамены
+Kde je učebňa číslo desať?|Где аудитория номер десять?
+Kedy sa začína prednáška?|Когда начинается лекция?
+Môžem sa opýtať?|Можно спросить?
+Môžete mi to vysvetliť?|Можете мне это объяснить?
+Čo máme urobiť?|Что нам нужно сделать?
+Dokedy máme odovzdať úlohu?|До какого срока нужно сдать задание?
+Môžem odovzdať úlohu neskôr?|Можно сдать задание позже?
+Ospravedlňujem sa za meškanie.|Извините за опоздание.
+Kedy je opravný termín?|Когда пересдача?
+Aké témy budú na skúške?|Какие темы будут на экзамене?
+Kde nájdem výsledky?|Где найти результаты?
+Môžem prísť na konzultáciu?|Можно прийти на консультацию?
+@Общежитие и жильё
+Máte voľnú izbu?|У вас есть свободная комната?
+Koľko stojí nájom?|Сколько стоит аренда?
+Sú energie zahrnuté v cene?|Коммунальные услуги включены в цену?
+Chcel by som bývať na internáte.|Я хотел бы жить в общежитии.
+Chcela by som bývať na internáte.|Я хотела бы жить в общежитии.
+Kde je práčovňa?|Где прачечная?
+Nefunguje internet.|Интернет не работает.
+Stratil som kľúč.|Я потерял ключ.
+Môžeme podpísať zmluvu?|Можем подписать договор?
+Kedy sa môžem nasťahovať?|Когда я могу заселиться?
+Prosím, nerobte hluk.|Пожалуйста, не шумите.
+Potrebujem opraviť kúrenie.|Мне нужно починить отопление.
+@Документы и банк
+Chcel by som si otvoriť účet.|Я хотел бы открыть счёт.
+Chcela by som si otvoriť účet.|Я хотела бы открыть счёт.
+Kde je najbližší bankomat?|Где ближайший банкомат?
+Potrebujem vyplniť formulár.|Мне нужно заполнить бланк.
+Kde sa mám podpísať?|Где мне подписать?
+Mám termín na desiatu.|У меня запись на десять.
+Potrebujem povolenie na pobyt.|Мне нужно разрешение на пребывание.
+Môžete mi dať kópiu?|Можете дать мне копию?
+Kedy bude dokument hotový?|Когда документ будет готов?
+Tu je môj pas.|Вот мой паспорт.
+@Повседневные дела
+Koľko je hodín?|Который час?
+Aký je dnes dátum?|Какая сегодня дата?
+Stretneme sa zajtra.|Встретимся завтра.
+Prídem o piatej.|Я приду в пять.
+Kde sa stretneme?|Где встретимся?
+Môžete mi ukázať cestu?|Можете показать мне дорогу?
+Kde je toaleta?|Где туалет?
+Potrebujem nabíjačku.|Мне нужно зарядное устройство.
+Môžem sa pripojiť na internet?|Можно подключиться к интернету?
+Aké je heslo na Wi-Fi?|Какой пароль от Wi-Fi?

@@ -1,0 +1,1020 @@
+@Основы|A1
+áno|да
+nie|нет
+prosím|пожалуйста
+ďakujem|спасибо
+ahoj|привет
+čau|привет; пока
+prepáč|извини
+dovidenia|до свидания
+vitaj|добро пожаловать
+meno|имя
+priezvisko|фамилия
+jazyk|язык
+slovo|слово
+veta|предложение
+otázka|вопрос
+odpoveď|ответ
+človek|человек
+ľudia|люди
+vec|вещь
+pravda|правда
+lož|ложь
+pomoc|помощь
+začiatok|начало
+koniec|конец
+čas|время
+miesto|место
+spôsob|способ
+príklad|пример
+problém|проблема
+riešenie|решение
+chyba|ошибка
+ja|я
+ty|ты
+on|он
+ona|она
+ono|оно
+my|мы
+vy|вы
+oni|они (мужчины)
+ony|они (женщины; предметы)
+kto|кто
+čo|что
+kde|где
+kam|куда
+odkiaľ|откуда
+kedy|когда
+ako|как
+prečo|почему
+koľko|сколько
+ktorý|который
+@Связки и наречия|A1
+a|и
+ale|но
+alebo|или
+pretože|потому что
+že|что (союз)
+ak|если
+keď|когда (союз)
+aby|чтобы
+aj|тоже; также
+ani|ни; даже не
+len|только
+už|уже
+ešte|ещё
+práve|именно; сейчас
+asi|наверное
+možno|возможно
+určite|обязательно; точно
+naozaj|действительно
+veľmi|очень
+celkom|вполне
+trochu|немного
+veľa|много
+málo|мало
+viac|больше
+menej|меньше
+najviac|больше всего
+najmenej|меньше всего
+vždy|всегда
+nikdy|никогда
+často|часто
+niekedy|иногда
+zvyčajne|обычно
+znovu|снова
+spolu|вместе
+sám|сам; один
+tu|здесь
+tam|там
+doma|дома
+domov|домой
+vonku|на улице
+von|наружу
+dnu|внутрь
+hore|наверху; вверх
+dole|внизу; вниз
+vľavo|слева
+vpravo|справа
+rovno|прямо
+blízko|близко
+ďaleko|далеко
+všade|везде
+@Предлоги и местоимения|A2
+v|в
+na|на
+do|в; до (направление)
+z|из
+s|с
+bez|без
+pre|для
+pri|при; у
+od|от
+k|к
+po|по; после
+o|о
+pred|перед
+za|за
+medzi|между
+pod|под
+nad|над
+proti|против
+cez|через
+okolo|вокруг
+vedľa|рядом с
+naproti|напротив
+kvôli|из-за; ради
+podľa|согласно
+môj|мой
+tvoj|твой
+jeho|его
+jej|её
+náš|наш
+váš|ваш
+ich|их
+svoj|свой
+ten|тот (мужской род)
+tá|та
+to|то; это
+tento|этот
+táto|эта
+toto|это (средний род)
+taký|такой
+každý|каждый
+všetko|всё
+všetci|все (люди)
+niekto|кто-то
+niečo|что-то
+nikto|никто
+nič|ничто
+niektorý|некоторый
+iný|другой
+seba|себя
+sa|возвратная частица «себя»
+@Глаголы: каждый день|A1
+byť|быть
+mať|иметь
+robiť|делать
+ísť|идти
+chodiť|ходить
+prísť|прийти
+odísť|уйти
+bývať|жить; проживать
+žiť|жить
+volať sa|называться
+hovoriť|говорить
+rozprávať|рассказывать
+povedať|сказать
+pýtať sa|спрашивать
+odpovedať|отвечать
+rozumieť|понимать
+vedieť|знать; уметь
+poznať|знать; быть знакомым
+myslieť|думать
+chcieť|хотеть
+môcť|мочь
+musieť|быть должным
+smieť|иметь разрешение
+potrebovať|нуждаться
+jesť|есть
+piť|пить
+spať|спать
+vstávať|вставать
+sedieť|сидеть
+stáť|стоять
+ležať|лежать
+čítať|читать
+písať|писать
+počúvať|слушать
+počuť|слышать
+vidieť|видеть
+pozerať|смотреть
+učiť sa|учиться
+študovať|учиться в вузе; изучать
+pracovať|работать
+hrať|играть
+cestovať|путешествовать
+čakať|ждать
+hľadať|искать
+nájsť|найти
+brať|брать
+vziať|взять
+dať|дать
+dávať|давать
+pomáhať|помогать
+@Глаголы: действия|A2
+pomôcť|помочь
+kúpiť|купить
+kupovať|покупать
+predať|продать
+predávať|продавать
+platiť|платить
+zaplatiť|заплатить
+variť|готовить еду
+piecť|печь
+umývať|мыть
+umyť|вымыть
+upratovať|убирать
+upratať|убрать
+otvoriť|открыть
+otvárať|открывать
+zatvoriť|закрыть
+zatvárať|закрывать
+začať|начать
+začínať|начинать
+skončiť|закончить
+končiť|заканчивать
+pokračovať|продолжать
+vrátiť sa|вернуться
+vracať sa|возвращаться
+zostať|остаться
+zostávať|оставаться
+odpočívať|отдыхать
+bežať|бежать
+plávať|плавать
+tancovať|танцевать
+spievať|петь
+smiať sa|смеяться
+plakať|плакать
+usmievať sa|улыбаться
+tešiť sa|радоваться
+báť sa|бояться
+cítiť|чувствовать
+cítiť sa|чувствовать себя
+pamätať si|помнить
+zabudnúť|забыть
+zabúdať|забывать
+poslať|послать
+posielať|посылать
+dostať|получить
+dostávať|получать
+priniesť|принести
+niesť|нести
+viesť|вести
+voziť|возить
+viezť|везти
+@Глаголы: учёба и общение|B1
+vysvetliť|объяснить
+vysvetľovať|объяснять
+opakovať|повторять
+zopakovať|повторить
+precvičovať|тренировать
+skúsiť|попробовать
+skúšať|пробовать; экзаменовать
+naučiť sa|выучить
+prečítať|прочитать
+napísať|написать
+preložiť|перевести
+prekladať|переводить
+pripraviť|подготовить
+pripravovať|подготавливать
+prihlásiť sa|зарегистрироваться
+prihlasovať sa|регистрироваться
+vyplniť|заполнить
+vyplňovať|заполнять
+podpísať|подписать
+podpisovať|подписывать
+odovzdať|сдать; передать
+odovzdávať|сдавать; передавать
+získať|получить; приобрести
+získavať|получать; приобретать
+zmeniť|изменить
+meniť|менять
+vybrať|выбрать
+vyberať|выбирать
+rozhodnúť sa|решить
+rozhodovať sa|принимать решение
+súhlasiť|соглашаться
+nesúhlasiť|не соглашаться
+navrhnúť|предложить
+navrhovať|предлагать
+diskutovať|обсуждать
+porovnať|сравнить
+porovnávať|сравнивать
+hodnotiť|оценивать
+skontrolovať|проверить
+kontrolovať|проверять
+opraviť|исправить
+opravovať|исправлять
+zúčastniť sa|принять участие
+zúčastňovať sa|участвовать
+chýbať|отсутствовать; не хватать
+stihnúť|успеть
+meškať|опаздывать
+zavolať|позвонить
+telefonovať|разговаривать по телефону
+objednať|заказать
+@Прилагательные: основы|A1
+dobrý|хороший
+zlý|плохой
+veľký|большой
+malý|маленький
+nový|новый
+starý|старый
+mladý|молодой
+pekný|красивый
+škaredý|некрасивый
+dlhý|длинный
+krátky|короткий
+vysoký|высокий
+nízky|низкий
+široký|широкий
+úzky|узкий
+teplý|тёплый
+studený|холодный
+horúci|горячий
+chladný|прохладный
+rýchly|быстрый
+pomalý|медленный
+ľahký|лёгкий
+ťažký|тяжёлый; трудный
+jednoduchý|простой
+zložitý|сложный
+lacný|дешёвый
+drahý|дорогой
+bohatý|богатый
+chudobný|бедный
+čistý|чистый
+špinavý|грязный
+plný|полный
+prázdny|пустой
+otvorený|открытый
+zatvorený|закрытый
+správny|правильный
+nesprávny|неправильный
+pravý|правый; настоящий
+ľavý|левый
+biely|белый
+čierny|чёрный
+červený|красный
+modrý|синий
+zelený|зелёный
+žltý|жёлтый
+hnedý|коричневый
+sivý|серый
+ružový|розовый
+oranžový|оранжевый
+fialový|фиолетовый
+@Прилагательные: качества|A2
+šťastný|счастливый
+smutný|грустный
+veselý|весёлый
+unavený|уставший
+hladný|голодный
+smädný|испытывающий жажду
+chorý|больной
+zdravý|здоровый
+silný|сильный
+slabý|слабый
+milý|милый
+príjemný|приятный
+nepríjemný|неприятный
+zaujímavý|интересный
+nudný|скучный
+dôležitý|важный
+potrebný|нужный
+možný|возможный
+nemožný|невозможный
+voľný|свободный
+obsadený|занятый
+hotový|готовый
+pripravený|подготовленный
+rovnaký|одинаковый
+podobný|похожий
+rozdielny|различный
+cudzí|чужой; иностранный
+vlastný|собственный
+spoločný|общий
+osobný|личный
+verejný|общественный
+súkromný|частный
+hlavný|главный
+posledný|последний
+ďalší|следующий
+blízky|близкий
+vzdialený|далёкий
+bezpečný|безопасный
+nebezpečný|опасный
+čerstvý|свежий
+suchý|сухой
+mokrý|мокрый
+sladký|сладкий
+slaný|солёный
+kyslý|кислый
+horký|горький
+mäkký|мягкий
+tvrdý|твёрдый
+tichý|тихий
+hlasný|громкий
+@Семья и люди|A1
+rodina|семья
+mama|мама
+matka|мать
+otec|отец
+rodič|родитель
+syn|сын
+dcéra|дочь
+brat|брат
+sestra|сестра
+dieťa|ребёнок
+bábätko|младенец
+starý otec|дедушка
+stará mama|бабушка
+vnuk|внук
+vnučka|внучка
+strýko|дядя
+teta|тётя
+bratranec|двоюродный брат
+sesternica|двоюродная сестра
+manžel|муж
+manželka|жена
+muž|мужчина
+žena|женщина
+chlapec|мальчик
+dievča|девочка
+priateľ|друг; парень
+priateľka|подруга; девушка
+kamarát|приятель
+kamarátka|приятельница
+sused|сосед
+susedka|соседка
+spolužiak|одноклассник; сокурсник
+spolužiačka|одноклассница; сокурсница
+kolega|коллега (мужчина)
+kolegyňa|коллега (женщина)
+hosť|гость
+návšteva|визит; гости
+pán|господин
+pani|госпожа
+slečna|девушка; барышня
+cudzinec|иностранец
+cudzinka|иностранка
+Slovák|словак
+Slovenka|словачка
+Rus|русский (мужчина)
+Ruska|русская (женщина)
+vek|возраст
+narodeniny|день рождения
+svadba|свадьба
+vzťah|отношение; связь
+@Дом и жильё|A1
+dom|дом
+byt|квартира
+izba|комната
+kuchyňa|кухня
+kúpeľňa|ванная
+záchod|туалет
+chodba|коридор
+balkón|балкон
+okno|окно
+dvere|дверь
+stena|стена
+podlaha|пол
+strop|потолок
+strecha|крыша
+schody|лестница
+výťah|лифт
+posteľ|кровать
+stôl|стол
+stolička|стул
+skriňa|шкаф
+polica|полка
+gauč|диван
+kreslo|кресло
+lampa|лампа
+svetlo|свет
+koberec|ковёр
+zrkadlo|зеркало
+chladnička|холодильник
+sporák|плита
+rúra|духовка
+práčka|стиральная машина
+umývadlo|раковина
+sprcha|душ
+vaňa|ванна
+kľúč|ключ
+zámok|замок (дверной)
+nájom|аренда; арендная плата
+nájomník|арендатор
+majiteľ|владелец
+ubytovanie|проживание
+internát|общежитие
+spolubývajúci|сосед по комнате
+adresa|адрес
+poschodie|этаж
+prízemie|первый этаж (уровень земли)
+elektrina|электричество
+kúrenie|отопление
+voda|вода
+plyn|газ
+odpad|мусор; отходы
+@Еда и напитки|A1
+jedlo|еда
+chlieb|хлеб
+rožok|рогалик; булочка
+žemľa|булочка
+maslo|сливочное масло
+syr|сыр
+mlieko|молоко
+jogurt|йогурт
+tvaroh|творог
+smotana|сливки; сметана
+vajce|яйцо
+mäso|мясо
+kurča|цыплёнок; курица
+hovädzina|говядина
+bravčovina|свинина
+ryba|рыба
+šunka|ветчина
+klobása|колбаса
+saláma|салями
+ryža|рис
+cestoviny|макароны
+zemiak|картофелина
+polievka|суп
+šalát|салат
+zelenina|овощи
+ovocie|фрукты
+jablko|яблоко
+hruška|груша
+banán|банан
+pomaranč|апельсин
+citrón|лимон
+jahoda|клубника
+hrozno|виноград
+paradajka|помидор
+uhorka|огурец
+mrkva|морковь
+cibuľa|лук
+cesnak|чеснок
+paprika|перец (овощ)
+soľ|соль
+cukor|сахар
+olej|растительное масло
+čaj|чай
+káva|кофе
+džús|сок
+pivo|пиво
+víno|вино
+minerálka|минеральная вода
+koláč|пирог; выпечка
+čokoláda|шоколад
+@Покупки и ресторан|A2
+obchod|магазин
+supermarket|супермаркет
+potraviny|продукты; продуктовый магазин
+trh|рынок
+pekáreň|пекарня
+reštaurácia|ресторан
+kaviareň|кафе
+jedáleň|столовая
+menu|меню
+jedálny lístok|меню блюд
+raňajky|завтрак
+obed|обед
+večera|ужин
+dezert|десерт
+nápoj|напиток
+porcia|порция
+tanier|тарелка
+pohár|стакан; бокал
+šálka|чашка
+lyžica|ложка
+vidlička|вилка
+nôž|нож
+obrúsok|салфетка
+čašník|официант
+čašníčka|официантка
+účet|счёт
+cena|цена
+zľava|скидка
+akcia|акция
+pokladňa|касса
+predavač|продавец
+predavačka|продавщица
+zákazník|покупатель
+košík|корзина
+vozík|тележка
+taška|сумка
+vrecko|пакет; карман
+balenie|упаковка
+kus|штука
+kilogram|килограмм
+gram|грамм
+liter|литр
+fľaša|бутылка
+konzerva|консервы; банка
+hotovosť|наличные
+karta|карта
+platba|платёж
+bloček|чек
+výdavok|расход
+reklamácia|претензия на товар
+@Город и транспорт|A1
+mesto|город
+dedina|деревня
+ulica|улица
+námestie|площадь
+cesta|дорога; путь
+chodník|тротуар
+križovatka|перекрёсток
+prechod|переход
+semafor|светофор
+most|мост
+park|парк
+budova|здание
+stanica|станция
+zastávka|остановка
+letisko|аэропорт
+prístav|порт
+vlak|поезд
+autobus|автобус
+električka|трамвай
+trolejbus|троллейбус
+auto|автомобиль
+taxík|такси
+bicykel|велосипед
+motorka|мотоцикл
+loď|корабль; лодка
+lietadlo|самолёт
+lístok|билет
+cestovný lístok|проездной билет
+cestovný poriadok|расписание транспорта
+spoj|рейс; транспортное сообщение
+nástupište|платформа
+koľaj|железнодорожный путь
+odchod|отправление
+príchod|прибытие
+prestup|пересадка
+smer|направление
+vodič|водитель
+cestujúci|пассажир
+sedadlo|сиденье
+batožina|багаж
+kufor|чемодан
+batoh|рюкзак
+mapa|карта местности
+centrum|центр
+vchod|вход
+východ|выход; восток
+západ|запад
+sever|север
+juh|юг
+vzdialenosť|расстояние
+@Тело и здоровье|A2
+telo|тело
+hlava|голова
+tvár|лицо
+oko|глаз
+ucho|ухо
+nos|нос
+ústa|рот
+zub|зуб
+kosť|кость
+krk|шея; горло
+rameno|плечо
+ruka|рука
+prst|палец
+noha|нога
+koleno|колено
+chrbát|спина
+brucho|живот
+srdce|сердце
+krv|кровь
+koža|кожа
+vlas|волос
+lekár|врач
+lekárka|врач (женщина)
+zubár|стоматолог
+zdravotná sestra|медсестра
+nemocnica|больница
+ambulancia|кабинет врача; амбулатория
+lekáreň|аптека
+liek|лекарство
+recept|рецепт врача
+bolesť|боль
+choroba|болезнь
+horúčka|высокая температура
+kašeľ|кашель
+nádcha|насморк
+alergia|аллергия
+úraz|травма
+rana|рана
+teplota|температура
+vyšetrenie|обследование
+liečba|лечение
+poistenie|страхование
+poisťovňa|страховая компания
+sanitka|машина скорой помощи
+pohotovosť|неотложная помощь
+zdravie|здоровье
+bolieť|болеть (о боли)
+dýchať|дышать
+kýchať|чихать
+kašľať|кашлять
+@Одежда и личные вещи|A1
+oblečenie|одежда
+šaty|платье
+tričko|футболка
+košeľa|рубашка
+blúzka|блузка
+sveter|свитер
+mikina|толстовка
+bunda|куртка
+kabát|пальто
+nohavice|брюки
+sukňa|юбка
+rifle|джинсы
+šortky|шорты
+oblek|костюм
+ponožka|носок
+pančuchy|колготки
+spodná bielizeň|нижнее бельё
+pyžamo|пижама
+plavky|купальник; плавки
+topánka|ботинок; туфля
+tenisky|кроссовки
+čižma|сапог
+papuča|тапочек
+čiapka|шапка
+klobúk|шляпа
+šál|шарф
+rukavica|перчатка
+opasok|ремень
+okuliare|очки
+hodinky|часы (наручные)
+prsteň|кольцо
+náušnica|серьга
+peňaženka|кошелёк
+dáždnik|зонт
+vreckovka|носовой платок
+uterák|полотенце
+mydlo|мыло
+šampón|шампунь
+kefka|щётка
+zubná pasta|зубная паста
+hrebeň|расчёска
+holiaci strojček|бритва
+parfum|духи
+krém|крем
+veľkosť|размер
+farba|цвет
+móda|мода
+obliekať sa|одеваться
+vyzliekať sa|раздеваться
+nosiť|носить
+@Время и числа|A1
+nula|ноль
+jeden|один
+dva|два
+tri|три
+štyri|четыре
+päť|пять
+šesť|шесть
+sedem|семь
+osem|восемь
+deväť|девять
+desať|десять
+jedenásť|одиннадцать
+dvanásť|двенадцать
+trinásť|тринадцать
+štrnásť|четырнадцать
+pätnásť|пятнадцать
+šestnásť|шестнадцать
+sedemnásť|семнадцать
+osemnásť|восемнадцать
+devätnásť|девятнадцать
+dvadsať|двадцать
+tridsať|тридцать
+štyridsať|сорок
+päťdesiat|пятьдесят
+šesťdesiat|шестьдесят
+sedemdesiat|семьдесят
+osemdesiat|восемьдесят
+deväťdesiat|девяносто
+sto|сто
+tisíc|тысяча
+milión|миллион
+prvý|первый
+druhý|второй
+tretí|третий
+štvrtý|четвёртый
+piaty|пятый
+deň|день
+týždeň|неделя
+mesiac|месяц; луна
+rok|год
+hodina|час
+minúta|минута
+sekunda|секунда
+dnes|сегодня
+včera|вчера
+zajtra|завтра
+ráno|утро; утром
+večer|вечер; вечером
+noc|ночь
+poludnie|полдень
+@Календарь и природа|A2
+pondelok|понедельник
+utorok|вторник
+streda|среда
+štvrtok|четверг
+piatok|пятница
+sobota|суббота
+nedeľa|воскресенье
+január|январь
+február|февраль
+marec|март
+apríl|апрель
+máj|май
+jún|июнь
+júl|июль
+august|август
+september|сентябрь
+október|октябрь
+november|ноябрь
+december|декабрь
+jar|весна
+leto|лето
+jeseň|осень
+zima|зима
+počasie|погода
+slnko|солнце
+dážď|дождь
+sneh|снег
+vietor|ветер
+oblak|облако
+búrka|гроза
+hmla|туман
+mráz|мороз
+príroda|природа
+les|лес
+strom|дерево
+kvet|цветок
+tráva|трава
+rieka|река
+jazero|озеро
+more|море
+hora|гора
+kopec|холм
+údolie|долина
+pole|поле
+záhrada|сад
+zem|земля
+kameň|камень
+piesok|песок
+vzduch|воздух
+oheň|огонь
+@Учёба и вуз|A2
+univerzita|университет
+vysoká škola|вуз
+fakulta|факультет
+katedra|кафедра
+študent|студент
+študentka|студентка
+učiteľ|учитель
+učiteľka|учительница
+profesor|профессор
+docent|доцент
+prednáška|лекция
+seminár|семинар
+cvičenie|упражнение; практическое занятие
+rozvrh|расписание занятий
+predmet|предмет
+odbor|специальность; область
+semester|семестр
+skúška|экзамен
+zápočet|зачёт
+kredit|учебный кредит
+známka|оценка
+výsledok|результат
+úloha|задание
+projekt|проект
+prezentácia|презентация
+poznámka|заметка
+zošit|тетрадь
+pero|ручка
+ceruzka|карандаш
+kniha|книга
+učebnica|учебник
+slovník|словарь
+knižnica|библиотека
+učebňa|учебная аудитория
+poslucháreň|лекционная аудитория
+laboratórium|лаборатория
+štúdium|учёба; обучение
+štipendium|стипендия
+prihláška|заявление на поступление
+prijatie|принятие; зачисление
+zápis|запись; зачисление на курс
+potvrdenie|справка; подтверждение
+vysvedčenie|табель; аттестат
+diplom|диплом
+maturita|выпускной экзамен в школе
+rektor|ректор
+dekan|декан
+konzultácia|консультация
+termín|дата; срок
+prázdniny|каникулы
+@Вуз: академическая лексика|B1
+bakalár|бакалавр
+magister|магистр
+doktorand|аспирант
+absolvent|выпускник
+uchádzač|абитуриент; кандидат
+prijímačky|вступительные экзамены
+školné|плата за обучение
+študijné oddelenie|учебный отдел
+študijný plán|учебный план
+povinný predmet|обязательный предмет
+voliteľný predmet|предмет по выбору
+skúškové obdobie|экзаменационная сессия
+opravný termín|дата пересдачи
+akademický rok|учебный год
+bakalárska práca|бакалаврская работа
+diplomová práca|магистерская работа
+obhajoba|защита работы
+vedúci práce|научный руководитель
+oponent|рецензент; оппонент
+výskum|исследование
+metóda|метод
+teória|теория
+prax|практика
+hypotéza|гипотеза
+zdroj|источник
+citácia|цитата; цитирование
+literatúra|литература
+obsah|содержание
+úvod|введение
+záver|заключение
+kapitola|глава
+odsek|абзац
+téma|тема
+názov|название
+údaj|данные; сведение
+dôkaz|доказательство
+analýza|анализ
+výpočet|вычисление
+vzorec|формула
+graf|график
+tabuľka|таблица
+prieskum|опрос; исследование
+hodnotenie|оценивание
+úspech|успех
+neúspech|неудача
+podmienka|условие
+požiadavka|требование
+povinnosť|обязанность
+možnosť|возможность
+vedomosť|знание
+@Документы, работа и техника|B1
+pas|паспорт
+občiansky preukaz|удостоверение личности
+pobyt|пребывание; проживание
+povolenie|разрешение
+vízum|виза
+žiadosť|заявление; просьба
+formulár|бланк
+podpis|подпись
+zmluva|договор
+úrad|учреждение; ведомство
+polícia|полиция
+cudzinecká polícia|полиция по делам иностранцев
+banka|банк
+bankomat|банкомат
+peniaze|деньги
+euro|евро
+cent|цент
+príjem|доход
+rozpočet|бюджет
+daň|налог
+práca|работа
+zamestnanie|занятость; работа
+brigáda|подработка
+zamestnanec|сотрудник
+zamestnávateľ|работодатель
+plat|зарплата
+životopis|резюме
+pohovor|собеседование
+firma|фирма
+kancelária|офис
+počítač|компьютер
+notebook|ноутбук
+mobil|мобильный телефон
+telefón|телефон
+internet|интернет
+sieť|сеть
+heslo|пароль
+súbor|файл
+priečinok|папка
+obrazovka|экран
+klávesnica|клавиатура
+myš|мышь
+tlačiareň|принтер
+nabíjačka|зарядное устройство
+batéria|батарея
+aplikácia|приложение
+správa|сообщение
+príloha|вложение
+odkaz|ссылка; сообщение
+stiahnuť|скачать
